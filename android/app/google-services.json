@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "590513056426",
+    "project_id": "pakphones-247b9",
+    "storage_bucket": "pakphones-247b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590513056426:android:8d3b84db121ba9093abed3",
+        "android_client_info": {
+          "package_name": "com.example.avye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590513056426-81qu5b3u2s3bpbinqhrcc0200kga90bk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARxdeZLuLCDHakZ7Qi1AnFgJuunDWIezE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590513056426-81qu5b3u2s3bpbinqhrcc0200kga90bk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "590513056426-9adpod612o884h8esat93i4g9vfe17pc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.avye.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
