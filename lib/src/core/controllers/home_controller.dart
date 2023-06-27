@@ -5,9 +5,9 @@ import '../../ui/categories_screen.dart';
 
 class HomeController extends GetxController {
   final pages = [
-    HomeBody(),
-    Second(),
-    Profile(),
+     HomeBody(),
+    const Second(),
+    const Profile(),
   ];
   final RxInt currentindex = 1.obs;
   void increment(int value) {

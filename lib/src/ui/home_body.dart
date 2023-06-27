@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeBody extends StatelessWidget {
-  const HomeBody({super.key});
-
+  HomeBody({super.key});
+  List items = [
+    {
+      'title': 'Galaxy Z fold 12 gb',
+      'price': 'Rs 230,000',
+      'image':'assets/images/SamsungGalaxyZFold412GB-b.jpg'
+    },
+    {
+      'title': 'Galaxy s22 ultra 16 gb',
+      'price': 'Rs 430,000',
+      'image':'SamsungGalaxyS21Plus-b.jpg'
+    },
+    {
+      'title': 'Galaxy s22 16 gb',
+      'price': 'Rs 230,000',
+      'image':'assets/images/SamsungGalaxyS21Plus-b.jpg'
+    }
+  ];
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    List items = [
-      'Some',
-      'of ht e',
-      'djjjdjdjdjd',
-      'ffffff',
-      'Some',
-      'of ht e',
-      'djjjdjdjdjd',
-      'ffffff'
-    ];
     return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
@@ -30,8 +35,40 @@ class HomeBody extends StatelessWidget {
           ),
           Container(
             width: width,
-            height: height * 0.3,
-            color: Colors.black,
+            height: height * 0.35,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              itemCount: items.length,
+              itemBuilder: (context, index){
+                return Container(
+                  height: 100,
+                  width: width * 0.4,
+                  margin: const EdgeInsets.symmetric(horizontal: 8),
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 0.5,
+                            blurRadius: 2,
+                            blurStyle: BlurStyle.normal,
+                            offset: Offset(0,0),
+                        ),
+
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Image(image: AssetImage(items[index]['image']), height: height * 0.35, width: width * 0.35,  fit: BoxFit.fitHeight,),
+                      Text(items[index]['title']),
+                      Text(items[index]['price'])
+                    ],
+                  ),
+                );
+              },
+            ),
           )
         ]),
       )),
